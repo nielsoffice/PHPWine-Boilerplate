@@ -46,13 +46,13 @@ PHPWine Boiler plate with bootstrap front end framework grid
 
   <div class="row">
 
-    <div class="col-12">
+   <div class="col-12">
      <h1>Child 1 Heading</h1>
      <p>Child 1 Descript</p>
    </div>
    <div class="col-12">
-    <h1>Child 2 Heading</h1>
-    <p>Child 2 Descript</p>
+     <h1>Child 2 Heading</h1>
+     <p>Child 2 Descript</p>
    </div>
    
   </div>
