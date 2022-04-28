@@ -67,7 +67,7 @@ PHPWine Boiler plate with bootstrap front end framework grid
 
       public array $data = [1,2,3,4];
 
-      public function tt() {
+      public function pp() {
 
         $bb = []; foreach($this->data as $val ) {
 
@@ -79,7 +79,7 @@ PHPWine Boiler plate with bootstrap front end framework grid
     
       }
 
-    })->tt()]]
+    })->pp()]]
 
   ]]);
   ```
