@@ -86,7 +86,9 @@ PHPWine Boiler plate with bootstrap front end framework grid
   
 ```HTML
  <!-- end result -->
- 1234
+<div>
+ <div> 1234 </div>
+</div>
 ```
  
   
