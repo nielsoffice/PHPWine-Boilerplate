@@ -2,7 +2,6 @@
 PHPWine Boiler plate with bootstrap front end framework grid
 
 ```PHP
- 
  // Child Boilerplate wine v1.3.1.0 
  // Bootstrap container 
  
@@ -37,10 +36,9 @@ PHPWine Boiler plate with bootstrap front end framework grid
  ],[['class'],['fluid-container']]);
  
 ```
-<h3> End result </h3>
 
 ```HTML
-
+<!-- End result -->
 <div class="fluid-container">
 <div class="container">
 
@@ -59,5 +57,36 @@ PHPWine Boiler plate with bootstrap front end framework grid
 
 </div>
 </div>
-
 ```
+
+```PHP
+ // Loop VALUE childElement array must be string! 
+ echo div([ CHILD => [
+    
+    ['div', VALUE => [ (new class {
+
+      public array $data = [1,2,3,4];
+
+      public function tt() {
+
+        $bb = []; foreach($this->data as $val ) {
+
+          $bb[] = $val;
+           
+        }
+
+        return implode('',  $bb);
+    
+      }
+
+    })->tt()]]
+
+  ]]);
+  ```
+  
+```HTML
+ <!-- end result -->
+ 1234
+```
+ 
+  
