@@ -14,21 +14,21 @@ PHPWine Boiler plate with bootstrap front end framework grid
 
            $wine_touched .= div([ CHILD => [
                 
-            ['h1', VALUE => ['Child 1 Heading']],
-            ['p',  VALUE => ['Child 1 Descript']]
+             ['h1', VALUE => ['Child 1 Heading']],
+             ['p',  VALUE => ['Child 1 Descript']]
 
-              ]
-             ],[['class'],['col-12']]);
+             ]
+            ],[['class'],['col-12']]);
 
-            $wine_touched .= div([ CHILD => [
+           $wine_touched .= div([ CHILD => [
               
-                 ['h1', VALUE => ['Child 2 Heading']],
-                 ['p',  VALUE => ['Child 2 Descript']]
+             ['h1', VALUE => ['Child 2 Heading']],
+             ['p',  VALUE => ['Child 2 Descript']]
 
              ]
             ],[['class'],['col-12']]);
              
-            return ($wine_touched);
+          return ($wine_touched);
             
         },[['class'],['row']])]
     ]
