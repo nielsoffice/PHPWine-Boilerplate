@@ -20,7 +20,7 @@ PHPWine Boiler plate with bootstrap front end framework grid
              ]
             ],[['class'],['col-12']]);
 
-           $wine_touched .= div([ CHILD => [
+            $wine_touched .= div([ CHILD => [
               
              ['h1', VALUE => ['Child 2 Heading']],
              ['p',  VALUE => ['Child 2 Descript']]
