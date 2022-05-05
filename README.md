@@ -1,5 +1,5 @@
 # PHPWine-Boilerplate
-PHPWine Boiler plate with bootstrap front end framework grid
+PHPWine Boilerplate with bootstrap front end framework grid
 
 ```PHP
  // Child Boilerplate wine v1.3.1.0 
@@ -59,6 +59,73 @@ PHPWine Boiler plate with bootstrap front end framework grid
 </div>
 ```
 
+<h4> Class Child element VALUE Layered array @  wine v 1.3.1.1</h4>
+
+```PHP
+   echo div([ CHILD => [
+
+   ['div', ATTR  => ['class' => 'container']
+         , VALUE => [(new Class {
+
+            public function rendered_output() {
+
+              return  wine_extract([
+                
+                $this->layer_first_column(),
+                $this->layer_second_column()
+    
+              ]);
+    
+            }
+
+            private function layer_first_column() {
+                
+                return div([ CHILD => [
+
+                    ['h3'],
+                    ['p']
+                   
+                ]],[['class'],['col-12']]); 
+
+            }
+
+            private function layer_second_column() {
+                
+                return div([ CHILD => [
+
+                    ['h3'],
+                    ['p']
+                   
+                ]],[['class'],['col-12']]); 
+
+            }
+            
+         })->rendered_output()],[['class'],['row']]
+   
+   ]
+   
+   ]],[['class'],['fluid-container']]);
+```
+```HTML
+<!-- End result -->
+<div class="fluid-container">
+ <div class="container">
+  
+  <!-- col 1 -->
+  <div class="col-12">
+    <h3></h3>
+    <p></p>
+  </div>
+
+  <!-- col 2 -->
+  <div class="col-12">
+    <h3></h3>
+    <p></p>
+  </div>
+  
+</div>
+</div>
+```
 ```PHP
  // Loop VALUE childElement array must be string! 
  echo div([ CHILD => [
