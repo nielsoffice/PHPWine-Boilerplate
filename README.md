@@ -158,7 +158,7 @@ PHPWine Boilerplate with bootstrap front end framework grid
 </div>
 ```
  
- <h4>Wine working with arrays of data and loop into html Elements</h4>
+ <h4>Wine working with arrays of data and loop into html Elements wine v1.3.1.1</h4>
  
  ```PHP
  
