@@ -158,4 +158,92 @@ PHPWine Boilerplate with bootstrap front end framework grid
 </div>
 ```
  
+ <h4>Wine working with arrays of data and loop into html Elements</h4>
+ 
+ ```PHP
+ 
+  // Data as array
+ $data = array(
+   
+    'name'   => [ 'john', 'Mark', 'Steve', 'Myla'],
+    'mobile' => [ '123', '456', '789', '987'],
+    'email'  => [ 'jj@mail.com','mm@mail.com', 'Ss@mail.com','ll@mail.com']
+
+ );
+ 
+  $appened = [];
   
+  foreach (  $data as $key => $value) {
+     
+    $appened[] = div(function() use ($value,  $key) {
+
+        $appenedChild = [];
+
+        foreach ($value as $request_d) {
+
+            $appenedChild[] = div([ CHILD => [
+
+                ['h1', VALUE => [ $key] ],
+                ['p',  VALUE => [ $request_d] ]
+                
+            ]]);
+
+        }
+
+        return wine_extract($appenedChild);
+    
+     },[['class'],['make-ap']]);
+    
+  }
+
+echo  wine_extract($appened);
+```
+
+```HTML
+
+<!-- End result -->
+
+<div class="make-app">
+  <div>
+   <h1>name</h1>
+    <p>john</p>
+  </div>
+
+  <div>
+   <h1>name</h1>
+   <p>Mark</p>
+  </div>
+ 
+</div> 
+<!-- and so on... -->
+
+<div class="make-app">
+  <div>
+    <h1>mobile</h1>
+    <p>123</p>
+  </div>
+  
+ <div>
+   <h1>mobile</h1>
+   <p>456</p>
+ </div>
+
+</div>
+  <!-- and so on... -->
+   
+<div class="make-app">
+
+ <div>
+   <h1>email</h1>
+   <p>jj@mail.com</p>
+</div>
+
+ <div>
+    <h1>email</h1>
+    <p>mm@mail.com</p>
+  </div>
+
+</div>
+  <!-- and so on... -->
+
+```
