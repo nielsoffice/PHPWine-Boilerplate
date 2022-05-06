@@ -249,6 +249,81 @@ echo  wine_extract($appened);
 
 ```
 
+```PHP
+ $condition_statement = 0; // condition_statement true or false
+
+ echo div([ CHILD => [
+     
+    ['div', ATTR  => ['class' => 'container']
+          , VALUE => [(new class {
+
+            public function rendered_output($condition_statement) {
+
+                return  wine_extract([
+                  
+                  $this->layer1_condition_statement($condition_statement)
+      
+                ]);
+      
+            }
+
+            public function layer1_condition_statement( bool $condition_statement ) : string {
+
+              return  div(function() use ( $condition_statement ) { $val = ''; 
+                
+                  if( $condition_statement ) {
+
+                    $val = div(
+                         
+                       ELEM('img')
+                      .ELEM('p','True')
+                        
+                    ,[['class','style'],['avatar-container','background-color: #f89727']]);
+            
+                    } else {
+            
+                     $val .= div(
+                         
+                       ELEM('img')
+                      .ELEM('p','False')
+                            
+                     ,[['class','style'],['avatar-container','background-color: #239727']]);
+                
+                    }
+                 
+                    return $val;
+                    
+                },[['class'],['col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4']]);
+
+            }
+
+          })->rendered_output($condition_statement)
+
+      ]]
+
+   ]]
+
+,[['class'],['flud-container']]);
+```
+
+```HTML
+
+<!-- nothing special if you get false or ELSE result -->
+<div class="flud-container">
+ <div class="container">
+   <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+    <div class="avatar-container" style="background-color: #239727">
+     
+     <img>
+     <p>False</p>
+     
+    </div>
+   </div>
+ </div>
+</div>
+
+```
+
 <h2>Thanks To:</h2>
 <h5>
 Github : To allow me to upload my PHPWine plugin Vanilla Flavour to repository<br /> 
