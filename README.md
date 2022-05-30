@@ -184,8 +184,8 @@ PHPWine Boiler plate with bootstrap front end framework grid
 
             $appenedChild[] = div([ CHILD => [
 
-                ['h1', VALUE => [ $key] ],
-                ['p',  VALUE => [ $request_d] ]
+                ['h1', VALUE => [$key] ],
+                ['p',  VALUE => [$request_d] ]
                 
             ]]);
 
